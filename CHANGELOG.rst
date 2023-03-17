@@ -1,6 +1,23 @@
 Change history
 ==============
 
+0.4.4 (2023-03-17)
+------------------
+* Improve support for the F34 multi-camera controller by adding default values for the camera index (1-4). Change the camera arg in view_axis to camera_name, change its default IP address to better-match with the main axis.launch file
+* Merge latest changes in master into noetic-devel
+* Merge Q62 support into noetic-devel branch (`#76 <https://github.com/ros-drivers/axis_camera/issues/76>`_)
+  * Add support for the Q6215 IR mode, defogger, and wiper
+  * Ensure that wiper, defog, IR modes are all disabled on startup
+  * Add a launch argument to expose the encrypted password option
+  * Add support for basic & digest HTTP authorization
+  * Rewrite some of the underling CGI calls to use requests to make the code easier to maintain
+  * Add support for authentication to the PTZ node
+  * Enable password encryption in view_axis.launch
+  * Expand the readme with details on usage, supported devices, available topics & services
+  * Add python3-requests as a dependendency
+  * Add support for the autoiris feature available on some cameras
+* Contributors: Chris Iverach-Brereton
+
 0.4.3 (2022-08-22)
 ------------------
 * Merge pull request `#73 <https://github.com/ros-drivers/axis_camera/issues/73>`_ from jhiggins-cpr/noetic-devel
@@ -33,6 +50,21 @@ Change history
   This reverts commit 569e4b22415edee653914fa387a689d2e85e2879.
 * Fix up the main scripts to be python-3 compliant
 * Merge branch 'master' of github.com:ros-drivers/axis_camera
+
+0.3.2 (2021-05-21)
+------------------
+* Improve support for the F34 and F44 multi-camera controllers by adding default values for the camera index (1-4). Change the camera arg in view_axis to camera_name, change its default IP address to better-match with the main axis.launch file
+* Contributors: Chris Iverach-Brereton
+
+0.3.1 (2020-12-10)
+------------------
+* Merge pull request `#62 <https://github.com/ros-drivers/axis_camera/issues/62>`_ from ros-drivers/teleop-axis
+  Fixed tele-op axis params.
+* Merge pull request `#55 <https://github.com/ros-drivers/axis_camera/issues/55>`_ from sgemme-csa/master
+  KeyError in publishCameraState when camera is not ready on PTZ camera
+* Expose the height & width parameters as arguments in the launch file
+* Merge pull request `#56 <https://github.com/ros-drivers/axis_camera/issues/56>`_ from jeff-o/patch-1
+  Update axis.launch
 * Merge pull request `#58 <https://github.com/ros-drivers/axis_camera/issues/58>`_ from luishowell/master
   add support for quad video
 * Merge pull request `#61 <https://github.com/ros-drivers/axis_camera/issues/61>`_ from cclauss/patch-1
@@ -44,7 +76,6 @@ Change history
 * Copy the README contents to the .md so they show up on the github main page
 * Update the maintainer now that Clearpath is officially maintaining this package again
 * Merge pull request `#54 <https://github.com/ros-drivers/axis_camera/issues/54>`_ from k-okada/add_travis
-  update travis.yml
 * update travis.yml
 * add support for quad video
 * Update axis.launch
