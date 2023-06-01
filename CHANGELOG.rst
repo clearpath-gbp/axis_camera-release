@@ -1,6 +1,11 @@
 Change history
 ==============
 
+0.4.7 (2023-06-01)
+------------------
+* Fix a bug that caused the ptz node to crash if the camera has fixed brightness
+* Contributors: Chris Iverach-Brereton
+
 0.4.6 (2023-05-05)
 ------------------
 * Wait until camera is online before connecting (`#78 <https://github.com/ros-drivers/axis_camera/issues/78>`_)
