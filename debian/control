@@ -1,0 +1,12 @@
+Source: ros-noetic-axis-description
+Section: misc
+Priority: optional
+Maintainer: Chris Iverach-Brereton <civerachb@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://ros.org/wiki/axis_camera
+Standards-Version: 3.9.2
+
+Package: ros-noetic-axis-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-urdf, ros-noetic-xacro
+Description: Description package with URDF files for common Axis fixed and PTZ cameras
