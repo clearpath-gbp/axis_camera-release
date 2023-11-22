@@ -1,6 +1,11 @@
 Change history
 ==============
 
+0.5.1 (2023-11-22)
+------------------
+* Remove an unnecessary import
+* Contributors: Chris Iverach-Brereton
+
 0.5.0 (2023-11-15)
 ------------------
 * Major overhaul for better PTZ support (`#80 <https://github.com/ros-drivers/axis_camera/issues/80>`_)
