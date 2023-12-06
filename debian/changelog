@@ -1,0 +1,99 @@
+ros-noetic-axis-description (0.5.2-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 06 Dec 2023 05:00:00 -0000
+
+ros-noetic-axis-description (0.5.1-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 22 Nov 2023 05:00:00 -0000
+
+ros-noetic-axis-description (0.5.0-1focal) focal; urgency=high
+
+  * Initial release
+  * Add meshes & URDF files for a fixed dome camera, PTZ dome camera, and the Q62 PTZ camera
+  * Contributors: Chris Iverach-Brereton
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 15 Nov 2023 05:00:00 -0000
+
+ros-noetic-axis-description (0.4.8-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 11 Aug 2023 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.7-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 01 Jun 2023 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.6-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 05 May 2023 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.5-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 30 Mar 2023 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.4-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 17 Mar 2023 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.3-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Mon, 22 Aug 2022 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.2-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 29 Jul 2022 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.1-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 16 Jun 2022 04:00:00 -0000
+
+ros-noetic-axis-description (0.4.0-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Mon, 29 Nov 2021 05:00:00 -0000
+
+ros-noetic-axis-description (0.3.0-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 25 May 2018 04:00:00 -0000
+
+ros-noetic-axis-description (0.2.1-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 17 Nov 2017 05:00:00 -0000
+
+ros-noetic-axis-description (0.2.0-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 06 May 2015 04:00:00 -0000
+
+ros-noetic-axis-description (0.1.0-1focal) focal; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 31 Jul 2014 04:00:00 -0000
+
+
