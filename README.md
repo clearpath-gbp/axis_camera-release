@@ -1,3 +1,29 @@
+## axis_camera (noetic) - 0.5.4-1
+
+The packages in the `axis_camera` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -t noetic -r noetic axis_camera` on `Wed, 31 Jan 2024 18:41:42 -0000`
+
+These packages were released:
+- `axis_camera`
+- `axis_description`
+- `axis_msgs`
+
+Version of package(s) in repository `axis_camera`:
+
+- upstream repository: https://github.com/ros-drivers/axis_camera.git
+- release repository: https://github.com/clearpath-gbp/axis_camera-release.git
+- rosdistro version: `0.5.3-1`
+- old version: `0.5.3-1`
+- new version: `0.5.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## axis_camera (noetic) - 0.5.3-1
 
 The packages in the `axis_camera` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -t noetic -r noetic axis_camera` on `Mon, 15 Jan 2024 17:53:29 -0000`
