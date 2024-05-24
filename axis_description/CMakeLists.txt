@@ -1,11 +1,9 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(axis_description)
 
-find_package(catkin REQUIRED
-  COMPONENTS
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY meshes urdf
+  DESTINATION share/${PROJECT_NAME}
 )
 
-catkin_package()
-
-install(DIRECTORY config meshes urdf
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+ament_package()

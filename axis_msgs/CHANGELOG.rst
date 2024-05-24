@@ -1,11 +1,10 @@
 Change history
 ==============
 
-0.5.4 (2024-01-31)
+2.0.0 (2024-05-23)
 ------------------
-
-0.5.3 (2024-01-15)
-------------------
+* Initial release for ROS 2
+* Contributors: Chris Iverach-Brereton, Mike Hosmar
 
 0.5.2 (2023-12-06)
 ------------------
