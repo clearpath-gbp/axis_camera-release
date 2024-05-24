@@ -1,3 +1,29 @@
+## axis_camera (humble) - 2.0.0-1
+
+The packages in the `axis_camera` repository were released into the `humble` distro by running `/usr/bin/bloom-release -t humble -r humble --new-track axis_camera` on `Fri, 24 May 2024 13:50:56 -0000`
+
+These packages were released:
+- `axis_camera`
+- `axis_description`
+- `axis_msgs`
+
+Version of package(s) in repository `axis_camera`:
+
+- upstream repository: https://github.com/ros-drivers/axis_camera.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## axis_camera (noetic) - 0.5.4-1
 
 The packages in the `axis_camera` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -t noetic -r noetic axis_camera` on `Wed, 31 Jan 2024 18:41:42 -0000`
