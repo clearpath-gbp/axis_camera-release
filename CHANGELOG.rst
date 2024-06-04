@@ -2,6 +2,9 @@
 Changelog for package axis_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2024-06-04)
+------------------
+
 2.0.1 (2024-05-24)
 ------------------
 * Remove the unused Axis.msg (all relevant information is now published in independent topics). Fix action imports in axis_ptz
