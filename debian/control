@@ -1,0 +1,12 @@
+Source: ros-humble-axis-camera
+Section: misc
+Priority: optional
+Maintainer: Chris Iverach-Brereton <civerachb@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-humble-ament-copyright <!nocheck>, ros-humble-ament-flake8 <!nocheck>, ros-humble-ament-pep257 <!nocheck>, ros-humble-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: http://ros.org/wiki/axis_camera
+Standards-Version: 3.9.2
+
+Package: ros-humble-axis-camera
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-requests, ros-humble-axis-msgs, ros-humble-camera-info-manager-py, ros-humble-ptz-action-server-msgs, ros-humble-sensor-msgs, ros-humble-std-srvs, ros-humble-ros-workspace
+Description: ROS 2 driver for fixed and PTZ Axis cameras
