@@ -1,3 +1,29 @@
+## axis_camera (jazzy) - 3.0.0-1
+
+The packages in the `axis_camera` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release -t jazzy -r jazzy axis_camera` on `Tue, 26 Nov 2024 16:28:00 -0000`
+
+These packages were released:
+- `axis_camera`
+- `axis_description`
+- `axis_msgs`
+
+Version of package(s) in repository `axis_camera`:
+
+- upstream repository: https://github.com/ros-drivers/axis_camera.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `3.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## axis_camera (humble) - 2.0.3-1
 
 The packages in the `axis_camera` repository were released into the `humble` distro by running `/usr/bin/bloom-release -t humble -r humble axis_camera` on `Fri, 01 Nov 2024 16:17:49 -0000`
