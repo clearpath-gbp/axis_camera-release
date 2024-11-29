@@ -1,0 +1,142 @@
+ros-jazzy-axis-description (3.0.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 29 Nov 2024 05:00:00 -0000
+
+ros-jazzy-axis-description (3.0.0-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Tue, 26 Nov 2024 05:00:00 -0000
+
+ros-jazzy-axis-description (2.0.2-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Tue, 04 Jun 2024 04:00:00 -0000
+
+ros-jazzy-axis-description (2.0.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 24 May 2024 04:00:00 -0000
+
+ros-jazzy-axis-description (2.0.0-1noble) noble; urgency=high
+
+  * Initial release for ROS 2
+  * Contributors: Chris Iverach-Brereton, Mike Hosmar
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 23 May 2024 04:00:00 -0000
+
+ros-jazzy-axis-description (0.5.4-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 31 Jan 2024 05:00:00 -0000
+
+ros-jazzy-axis-description (0.5.3-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Mon, 15 Jan 2024 05:00:00 -0000
+
+ros-jazzy-axis-description (0.5.2-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 06 Dec 2023 05:00:00 -0000
+
+ros-jazzy-axis-description (0.5.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 22 Nov 2023 05:00:00 -0000
+
+ros-jazzy-axis-description (0.5.0-1noble) noble; urgency=high
+
+  * Initial release
+  * Add meshes & URDF files for a fixed dome camera, PTZ dome camera, and the Q62 PTZ camera
+  * Contributors: Chris Iverach-Brereton
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 15 Nov 2023 05:00:00 -0000
+
+ros-jazzy-axis-description (0.4.8-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 11 Aug 2023 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.7-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 01 Jun 2023 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.6-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 05 May 2023 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.5-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 30 Mar 2023 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.4-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 17 Mar 2023 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.3-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Mon, 22 Aug 2022 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.2-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 29 Jul 2022 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 16 Jun 2022 04:00:00 -0000
+
+ros-jazzy-axis-description (0.4.0-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Mon, 29 Nov 2021 05:00:00 -0000
+
+ros-jazzy-axis-description (0.3.0-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 25 May 2018 04:00:00 -0000
+
+ros-jazzy-axis-description (0.2.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Fri, 17 Nov 2017 05:00:00 -0000
+
+ros-jazzy-axis-description (0.2.0-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Wed, 06 May 2015 04:00:00 -0000
+
+ros-jazzy-axis-description (0.1.0-1noble) noble; urgency=high
+
+
+
+ -- Chris Iverach-Brereton <civerachb@clearpathrobotics.com>  Thu, 31 Jul 2014 04:00:00 -0000
+
+
