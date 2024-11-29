@@ -1,0 +1,12 @@
+Source: ros-jazzy-axis-camera
+Section: misc
+Priority: optional
+Maintainer: Chris Iverach-Brereton <civerachb@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-jazzy-ament-copyright <!nocheck>, ros-jazzy-ament-flake8 <!nocheck>, ros-jazzy-ament-pep257 <!nocheck>, ros-jazzy-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: http://ros.org/wiki/axis_camera
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-axis-camera
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-requests, ros-jazzy-axis-msgs, ros-jazzy-camera-info-manager-py, ros-jazzy-ptz-action-server-msgs, ros-jazzy-sensor-msgs, ros-jazzy-std-srvs, ros-jazzy-ros-workspace
+Description: ROS 2 driver for fixed and PTZ Axis cameras
