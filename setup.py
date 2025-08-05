@@ -7,7 +7,7 @@ package_name = 'axis_camera'
 
 setup(
     name=package_name,
-    version='2.0.3',
+    version='2.0.4',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -23,7 +23,9 @@ setup(
     maintainer_email='civerachb@clearpathrobotics.com',
     description='ROS 2 driver for fixed and PTZ Axis cameras',
     license='BSD',
-    tests_require=['pytest'],
+    extras_require={
+        'test': ['pytest'],
+    },
     entry_points={
         'console_scripts': [
             'axis_camera_node = axis_camera.axis_camera_node:main'
