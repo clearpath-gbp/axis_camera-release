@@ -2,18 +2,27 @@
 Changelog for package axis_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.0.4 (2025-08-05)
+3.0.3 (2026-10-26)
 ------------------
-* Fix code formatting so tests pass
-* `tests_require` -> `extras_require` (`#93 <https://github.com/ros-drivers/axis_camera/issues/93>`_)
-  As proposed by https://github.com/ros-drivers/axis_camera/issues/92
+* fix restaring driver properly after power cycle
+* Contributors: José Mastrangelo
+
+3.0.2 (2025-08-05)
+------------------
+* tests_require -> extras_require
+  Applying fix from Humble to Jazzy branch
 * Contributors: Chris Iverach-Brereton
 
-2.0.3 (2024-11-01)
+3.0.1 (2024-11-29)
+------------------
+* Linting fixes
+* Contributors: Chris Iverach-Brereton
+
+3.0.0 (2024-11-26)
 ------------------
 * Add/cmd vel topic (`#90 <https://github.com/ros-drivers/axis_camera/issues/90>`_)
   * added cmd/velocity topic for continuous velocity control
-* Contributors: Jose Mastrangelo
+* Contributors: jmastrangelo-cpr
 
 2.0.2 (2024-06-04)
 ------------------

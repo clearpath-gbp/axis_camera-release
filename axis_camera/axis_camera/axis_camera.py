@@ -33,6 +33,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 
+import http.client
 import os
 import re
 import subprocess  # noqa: S404
@@ -63,7 +64,9 @@ class StreamThread(threading.Thread):
         self.axis.get_logger().warning('stream thread')
         self.daemon = True
         self.timeoutSeconds = 2.5
+        self.reconnectDelaySeconds = 1.0
         self.frame_counter = 0
+        self.fp = None
 
     def waitForHost(self):
         """
@@ -103,7 +106,9 @@ class StreamThread(threading.Thread):
                 # if self.openURLrtps():
                 self.publishFramesContinuously()
 
-            # rclpy.sleep(2) # if stream stays intact we shouldn't get to this
+            # The camera is unreachable or dropped the stream (e.g. it is power-cycling);
+            # wait before retrying instead of spinning on immediate failures
+            time.sleep(self.reconnectDelaySeconds)
 
     def formURL(self):
         self.url = (
@@ -154,7 +159,7 @@ class StreamThread(threading.Thread):
             else:
                 handler = urllib.request.HTTPBasicAuthHandler(password_mgr)
 
-            # create "opener" (OpenerDirector instance)
+            # create 'opener' (OpenerDirector instance)
             opener = urllib.request.build_opener(handler)
 
             # ...and install it globally so it can be used with urlopen.
@@ -166,9 +171,11 @@ class StreamThread(threading.Thread):
             self.fp = urllib.request.urlopen(self.url, timeout=self.timeoutSeconds)  # noqa: S310
             # print(self.fp)
             return True
-        except urllib.error.URLError:
+        except (OSError, http.client.HTTPException) as e:
+            # urlopen only wraps some failures in URLError; a camera that drops the connection
+            # while booting raises e.g. RemoteDisconnected, which would otherwise kill this thread
             self.axis.get_logger().warning(
-                f'Error opening URL {self.url}; possible timeout. Looping until camera appears'
+                f'Error opening URL {self.url}: {e}. Looping until camera appears'
             )
             return False
 
@@ -189,18 +196,36 @@ class StreamThread(threading.Thread):
                 self.publishCameraInfoMsg()
 
             except Exception as e:
-                self.axis.get_logger().warning(f'Timed out while trying to get message: {e}')
+                self.axis.get_logger().warning(f'Video stream interrupted: {e}. Reconnecting')
+                self.closeURL()
                 break
+
+    def closeURL(self):
+        """Close the current video stream connection, if any."""
+        if self.fp is not None:
+            try:
+                self.fp.close()
+            except Exception:  # noqa: S110
+                pass
+            self.fp = None
+
+    def readStreamLine(self):
+        """Read one line of the video stream, raising if the camera has closed it."""
+        line = self.fp.readline()
+        if not line:
+            # readline() returns b'' forever once the connection is closed
+            raise ConnectionError('camera closed the video stream')
+        return line
 
     def findBoundary(self):
         """
         Find boundry in datastream.
 
-        The string "--myboundary" is used to denote the start of an image in
+        The string '--myboundary' is used to denote the start of an image in
         Axis cameras
         """
         while True:
-            boundary = self.fp.readline()
+            boundary = self.readStreamLine()
             if boundary == b'--myboundary\r\n':
                 # self.axis.get_logger().warning(boundary)
                 break
@@ -213,7 +238,7 @@ class StreamThread(threading.Thread):
     def getHeader(self):
         self.header = {}
         while True:
-            line = self.fp.readline()
+            line = self.readStreamLine()
             if line == b'\r\n':
                 # print(line) #b'\r\n'
                 break
@@ -233,6 +258,8 @@ class StreamThread(threading.Thread):
         """Get the binary image data itself (ie. without header)."""
         if self.content_length > 0:
             self.img = self.fp.read(self.content_length)
+            if len(self.img) < self.content_length:
+                raise ConnectionError('camera closed the video stream mid-frame')
             self.fp.readline()  # Read terminating \r\n and do nothing with it
 
     def publishMsg(self):
@@ -347,7 +374,7 @@ class Axis(Node):
         self.use_ptz = self.get_parameter('ptz').value
         self.ptz_teleop = self.get_parameter('ptz_teleop').value
 
-        self.frame_id = f"{self.tf_prefix}_camera_frame"
+        self.frame_id = f'{self.tf_prefix}_camera_frame'
 
         self.use_legacy_ir_url = False
 
@@ -460,7 +487,7 @@ class Axis(Node):
         """
         Return string representation.
 
-        @return A string of the form "root@192.168.0.90:80(320x240)"
+        @return A string of the form 'root@192.168.0.90:80(320x240)'
         """
         return f'{self.username}@{self.hostname}:{self.http_port}({self.width}x{self.height})'
 
@@ -633,7 +660,7 @@ class Axis(Node):
 
     def handle_set_autofocus(self, req, resp):
         get_url = (
-            f"http://{self.hostname}:{self.http_port}/axis-cgi/com/ptz.cgi?autofocus={'on' if req.data else 'off'}"  # noqa: E501
+            f'http://{self.hostname}:{self.http_port}/axis-cgi/com/ptz.cgi?autofocus={"on" if req.data else "off"}'  # noqa: E501
         )
         try:
             http_resp = requests.get(
@@ -649,7 +676,7 @@ class Axis(Node):
 
     def handle_set_autoiris(self, req, resp):
         get_url = (
-            f"http://{self.hostname}:{self.http_port}/axis-cgi/com/ptz.cgi?autoiris={'on' if req.data else 'off'}"  # noqa: E501
+            f'http://{self.hostname}:{self.http_port}/axis-cgi/com/ptz.cgi?autoiris={"on" if req.data else "off"}'  # noqa: E501
         )
         try:
             http_resp = requests.get(
