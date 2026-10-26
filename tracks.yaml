@@ -43,7 +43,7 @@ tracks:
     - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
       -i :{release_inc} --require-os fedora rhel
     devel_branch: jazzy-devel
-    last_version: 3.0.2
+    last_version: 3.0.3
     name: upstream
     patches: null
     release_inc: '1'
